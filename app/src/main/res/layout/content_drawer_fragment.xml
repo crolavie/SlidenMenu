@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#000000">
+        <Button
+            android:id="@+id/openleft"
+            android:onClick="open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边"/>
+        <Button
+            android:id="@+id/openright"
+            android:onClick="open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右边"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/title">
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@mipmap/loading2">
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/left_menu"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            ></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_menu"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            ></RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
